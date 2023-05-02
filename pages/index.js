@@ -7,7 +7,7 @@ import { BioYear, BioSection, AbSection, Abilities } from '../components/bio'
 import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub, IoLogoDiscord, IoLogoYoutube } from 'react-icons/io5'
 import Layout from '../components/layouts/article'
 
-const Page = () => {
+const Home = () => {
     return (
         <Layout title="Anasayfa">
             <Container>
@@ -184,4 +184,4 @@ const Page = () => {
     )
 }
 
-export default Page
+export default Home

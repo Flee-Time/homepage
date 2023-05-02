@@ -11,7 +11,7 @@ import thumbVerlet from '../public/images/projects/verlet.png'
 import thumbArdupilot from '../public/images/projects/ardupilot.png'
 import thumbCDworldgen from '../public/images/projects/cdworldgen.png'
 
-const Page = () => (
+const Projects = () => (
   <Layout title="Calışmalarım">
     <Container>
       <Heading as="h3" fontSize={20} mb={4}>
@@ -58,4 +58,4 @@ const Page = () => (
   </Layout>
 )
 
-export default Page
+export default Projects

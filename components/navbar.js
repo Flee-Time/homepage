@@ -1,3 +1,4 @@
+import { forwardRef } from 'react'
 import Logo from './logo'
 import NextLink from 'next/link'
 import {
@@ -17,20 +18,24 @@ import {
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
 
-const LinkItem = ({href, path, children}) => {
+const LinkItem = ({ href, path, target, children, ...props }) => {
     const active = path === href
-    const inactiveColor = useColorModeValue('gray.200', 'WhiteAlpha.900')
-    return(
-        <NextLink href={href}>
-            <Link
-                p={2}
-                bg={active ? 'glassTeal' : undefined}
-                color={active ? '#202023' : inactiveColor}>
-                    {children}
-                </Link>
-        </NextLink>
-    )
-}
+    const inactiveColor = useColorModeValue('gray.800', 'whiteAlpha.900')
+    return (
+        <Link
+            as={NextLink}
+            href={href}
+            scroll={false}
+            p={2}
+            bg={active ? 'grassTeal' : undefined}
+            color={active ? '#202023' : inactiveColor}
+            target={target}
+            {...props}
+            >
+            {children}
+        </Link>
+        )
+    }
 
 const Navbar = props => {
     const { path } = props
@@ -41,7 +46,7 @@ const Navbar = props => {
             w="100%"
             bg={useColorModeValue('#ffffff40', '#20202380')}
             style={{backdropFilter:'blur(10px)'}}
-            zIndex={1}
+            zIndex={2}
             {...props}
             >
                 <Container 
@@ -65,9 +70,9 @@ const Navbar = props => {
                         flexGrow={1}
                         mt={{ base: 4, nmd: 0}}
                         >
-                            <NextLink href="/projects" passHref>
+                            <LinkItem href="/projects" path={path}>
                                 Projelerim
-                            </NextLink>
+                            </LinkItem>
                         </Stack>
                     <Box flex={1} align="right">
                         <ThemeToggleButton />

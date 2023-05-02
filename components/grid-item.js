@@ -12,8 +12,8 @@ export const GridItem = ({ children, href, title, thumbnail }) => (
       placeholder="blur"
       loading="eager"
     />
-    <Text mt={2} fontSize={20}>{title}</Text>
-    <Text fontSize={14}>{children}</Text>
+    <Text mt={2} fontSize={20} fontFamily='Roboto' fontWeight="bold">{title}</Text>
+    <Text fontSize={14} fontWeight="normal" fontFamily='Roboto'>{children}</Text>
   </Box>
 )
 

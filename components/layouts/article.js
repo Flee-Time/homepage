@@ -23,8 +23,8 @@ const Layout = ({ children, title }) => {
         {title && (
           <Head>
             <title>{t}</title>
-            <meta name="twitter:title" content={t} />
-            <meta property="og:title" content={t} />
+            <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+            <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
           </Head>
         )}
         {children}

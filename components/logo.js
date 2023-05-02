@@ -28,9 +28,10 @@ const Logo = () => {
                     <Image src={footPrintImg} width={40} height={25} alt="logo" />
                     <Text
                         color={useColorModeValue('gray.800', 'whiteAlpha.900')}
-                        fontFamily='M PLUS Rounded 1c'
+                        fontFamily='Roboto'
                         fontWeight="bold"
                         ml={3}
+                        style={{ letterSpacing: 0.75 }}
                     >
                         Koray Bilir
                     </Text>
