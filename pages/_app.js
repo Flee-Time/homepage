@@ -4,6 +4,10 @@ import Fonts from '../components/fonts'
 import theme from '../lib/theme'
 import { AnimatePresence } from 'framer-motion'
 
+if (typeof window !== 'undefined') {
+    window.history.scrollRestoration = 'manual'
+}
+
 const Website = ({ Component, pageProps, router }) => {
     return(
         <Chakra cookies={pageProps.cookies}>
