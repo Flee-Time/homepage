@@ -1,0 +1,14 @@
+{
+    "root": true,
+    "extends": "next",
+    "rules": {
+        "no-unused-vars":[
+            1,
+            {
+                "argsIgnorePattern": "^_",
+                "varsIgnorePattern": "^_"
+            }
+        ],
+        "react/no-unescaped-entities": "off"
+    }
+}

@@ -28,7 +28,7 @@ const Page = () => {
                         </p>
                     </Box>
                     <Box flexShrink={0} mt={{base: 4, md: 0}} ml={{md: 6}} align="center" >
-                        <Image borderColor={useColorModeValue('gray.800', 'purple')} borderWidth={2} borderStyle="solid" maxWidth="100px" display="inline-block" borderRadius="full" src="/images/profile-picture.jpg" alt="Profile Image" />
+                        <Image borderColor={useColorModeValue('gray.800', 'purple')} borderWidth={2} borderStyle="solid" maxWidth="100px" display="inline-block" borderRadius="full" src="../public/images/profile-picture.jpg" alt="Profile Image" />
                     </Box>
                 </Box>
                 <Section delay={0.1}>
