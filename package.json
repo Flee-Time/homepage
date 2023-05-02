@@ -1,0 +1,33 @@
+{
+  "name": "homepage",
+  "version": "1.0.0",
+  "description": "Web site portfolio",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0",
+    "build": "next build",
+    "start": "next start",
+    "prettier": "prettier -w",
+    "lint": "next lint"
+  },
+  "keywords": [],
+  "author": "Koray Bilir",
+  "license": "MIT",
+  "dependencies": {
+    "@chakra-ui/icons": "^1.1.7",
+    "@chakra-ui/react": "^1.8.9",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "framer-motion": "^6.5.1",
+    "next": "^12.3.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.8.0",
+    "sharp": "^0.32.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.35.0",
+    "eslint-config-next": "^12.3.4",
+    "prettier": "^2.8.4"
+  }
+}
