@@ -10,7 +10,7 @@ export const GridItem = ({ children, href, title, thumbnail }) => (
       alt={title}
       className="grid-item-thumbnail"
       placeholder="blur"
-      loading="lazy"
+      loading="eager"
     />
     <Text mt={2} fontSize={20}>{title}</Text>
     <Text fontSize={14}>{children}</Text>
