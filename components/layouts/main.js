@@ -9,6 +9,7 @@ const Main = ({ children, router}) => {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
                 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+                <meta name="description" content="Koray Bilir'in portfolyo sitesi." />
                 <title>Koray Bilir</title>
             </Head>
 
