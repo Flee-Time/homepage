@@ -21,7 +21,7 @@ const Home = () => {
                             Koray Bilir
                         </Heading>
                         <Heading as="h2" variant="page-title" color={useColorModeValue('#11111', '#7289DA')} fontSize={15} align="center">
-                            FleeTime#2097
+                            Discord : fleetime
                         </Heading>
                         <p align="center">
                             FleeTime ( Öğrenci / Yazılım Geliştirici )
