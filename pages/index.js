@@ -133,8 +133,16 @@ const Home = () => {
                         TEKNOFEST'in Otonom Denizaltı yarışmasında yer aldı.
                     </BioSection>
                     <BioSection>
-                        <BioYear>2022</BioYear>
-                        Bursa Uludağ Üniversitesi'nde Bilgisayar Programcılığı'nda okumaya başladı.
+                        <BioYear>2022 - 2024</BioYear>
+                        Bursa Uludağ Üniversitesi'nde Bilgisayar Programcılığı bölümünden sınıf birinciliğiyle mezun oldu.
+                    </BioSection>
+                    <BioSection>
+                        <BioYear>2023 - 2024</BioYear>
+                        Bosch Türkiye'de Yazılım geliştiricisi olarak stajını tamamladı.
+                    </BioSection>
+                    <BioSection>
+                        <BioYear>2024</BioYear>
+                        Anadolu Üniversitesi (Eskişehir)'de Açıköğretim Yönetim Bilişim Sistemleri okumaya başladı.
                     </BioSection>
                 </Section>
                 <Section delay={0.5}>
