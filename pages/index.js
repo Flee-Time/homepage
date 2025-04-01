@@ -1,34 +1,31 @@
-import { Container, Box, Heading, Image, useColorModeValue, Button, List, ListItem, Link, Icon } from '@chakra-ui/react'
+import { Container, Box, Heading, Image, useColorModeValue, Button, List, ListItem, Link, Icon, Divider } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import NextLink from 'next/link'
 import Section from '../components/section'
 import { Paragraph , Centered_Paragraph } from '../components/paragraph'
-import { BioYear, BioSection, AbSection, Abilities } from '../components/bio'
+import { BioYear, BioSection, AbSection, Abilities, BioDiv } from '../components/bio'
 import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub, IoLogoDiscord, IoLogoYoutube } from 'react-icons/io5'
+import { TbBrandMatrix } from "react-icons/tb";
 import Layout from '../components/layouts/article'
 
 const Home = () => {
     return (
         <Layout title="Anasayfa">
             <Container>
-                <Box borderRadius="lg" bg={useColorModeValue('whiteAlpha.500', '#7289DA')} p={3} mb={6} align="center">
-                    Benim ana sayfama hoş geldiniz, projelerimi incelemenizi teşvik ederim.
-                </Box>
-
-                <Box display={{md:'flex'}}>
+                <Box display={{md:'flex'}} style={{marginTop:'30px'}}>
                     <Box flexGrow={1}>
-                        <Heading as="h2" variant="page-title" color={useColorModeValue('#11111', '#7289DA')} align="center">
+                        <Heading as="h2" variant="page-title" color={useColorModeValue('#111111', '#7289DA')} align="center">
                             Koray Bilir
                         </Heading>
-                        <Heading as="h2" variant="page-title" color={useColorModeValue('#11111', '#7289DA')} fontSize={15} align="center">
+                        {/* <Heading as="h2" variant="page-title" color={useColorModeValue('#111111', '#7289DA')} fontSize={15} align="center">
                             Discord : fleetime
-                        </Heading>
-                        <p align="center">
+                        </Heading> */}
+                        <Heading as="h3" fontSize={15} align="center">
                             FleeTime ( Öğrenci / Yazılım Geliştirici )
-                        </p>
+                        </Heading>
                     </Box>
                     <Box flexShrink={0} mt={{base: 4, md: 0}} ml={{md: 6}} align="center" >
-                        <Image borderColor={useColorModeValue('gray.800', 'purple')} borderWidth={2} borderStyle="solid" maxWidth="100px" display="inline-block" borderRadius="full" src="images/profile-picture.jpg" alt="Profile Image" />
+                        <Image borderColor={useColorModeValue('#111111', '#7289DA')} borderWidth={2} borderStyle="solid" maxWidth="100px" display="inline-block" borderRadius="full" src="images/profile-picture.jpg" alt="Profile Image" />
                     </Box>
                 </Box>
                 <Section delay={0.1}>
@@ -36,12 +33,11 @@ const Home = () => {
                         Hakkımda
                     </Heading>
                     <Paragraph>
-                        Koray, programlar ve web siteleri geliştirme tutkusu olan bir öğrencidir. 
-                        Serbest çalışmayı benimsemiş bir zihniyeti vardır ve işi zamanında bitirir. 
-                        Boş zamanlarında yeni uygulamalar tasarlamayı seviyor, 
-                        bunu yapmak ona deneyim kazandırdığı için çok hoşuna gidiyor. 
-                        Çalışmadığı zamanlarda muhtemelen arkadaşlarıyla oyun oynuyor. 
-                        Koray, yaptıklarını dünyayla paylaşmak için boş zamanlarında yayın yapmayı seven birisidir. 
+                    Koray, endüstriyel otomasyon ve yazılım geliştirme alanlarında deneyimli bir teknoloji meraklısıdır. 
+                    Web siteleri ve yazılımlar geliştirmenin yanı sıra, elektronik projeler üzerinde çalışmayı sever. 
+                    Serbest çalışmaya yatkın, çözüm odaklı bir zihniyete sahiptir ve projelerini titizlikle tamamlar. 
+                    Şu sıralar kişisel projelerine ve teknik altyapısını geliştirmeye odaklanıyor. 
+                    Boş zamanlarında eski bilgisayar donanımlarıyla uğraşır, kendi sunucularını yönetir ve akıllı ev sistemleriyle ilgilenir.
                     </Paragraph>
                     <Box align="center" my={4}>
                         <NextLink href="/projects">
@@ -57,32 +53,20 @@ const Home = () => {
                     </Heading>
                     <Centered_Paragraph>
                         <AbSection>
-                            <Abilities>C</Abilities>
-                            &
-                            <Abilities>C++</Abilities>
-                            &
-                            <Abilities>C#</Abilities>
+                            <Abilities>Proglamlama Dilleri:</Abilities>
+                            C, C++, C#, Java, Python, SQL
                         </AbSection>
                         <AbSection>
-                            <Abilities>HTML</Abilities>
-                            &  
-                            <Abilities>CSS</Abilities>
-                            &
-                            <Abilities>JAVASCRIPT</Abilities>
+                            <Abilities>Web Teknolojileri:</Abilities>
+                            HTML, CSS, JavaScript, Node.js, React
                         </AbSection>
                         <AbSection>
-                            <Abilities>Node.js</Abilities>
-                            &
-                            <Abilities>React</Abilities>
+                            <Abilities>Sistem Yönetimi:</Abilities>
+                            Linux sunucu yönetimi, Bash scripting
                         </AbSection>
                         <AbSection>
-                            <Abilities>Java</Abilities>
-                        </AbSection>
-                        <AbSection>
-                            <Abilities>Python</Abilities>
-                        </AbSection>
-                        <AbSection>
-                            <Abilities>Sql</Abilities> 
+                            <Abilities>Diğer:</Abilities>
+                            Gömülü sistemler, 3D CAD Modelleme (SolidWorks)
                         </AbSection>
                     </Centered_Paragraph>
                 </Section>
@@ -92,19 +76,22 @@ const Home = () => {
                     </Heading>
                     <Centered_Paragraph>
                         <AbSection>
-                            <Abilities>Gömülü yazılım geliştirmek</Abilities>
+                            <Abilities>Gömülü yazılım ve donanım geliştirme</Abilities>
                         </AbSection>
                         <AbSection>
-                            <Abilities>Web tasarımı yapmak</Abilities>
+                            <Abilities>Linux sunucu yönetimi ve otomasyon</Abilities>
                         </AbSection>
                         <AbSection>
-                            <Abilities>Üç boyutlu animasyon yapmak</Abilities>
+                            <Abilities>Web tasarımı ve uygulama geliştirme</Abilities>
                         </AbSection>
                         <AbSection>
-                            <Abilities>İndie oyun geliştirmek</Abilities>
+                            <Abilities>Akıllı ev otomasyonu ve IoT sistemleri</Abilities>
                         </AbSection>
                         <AbSection>
-                            <Abilities>Fizik simulatörleri geliştirmek</Abilities>
+                            <Abilities>Fizik simülasyonları ve veri görselleştirme</Abilities>
+                        </AbSection>
+                        <AbSection>
+                            <Abilities>Retro bilgisayar donanımları ve yazılımları</Abilities>
                         </AbSection>
                     </Centered_Paragraph>
                 </Section>
@@ -114,35 +101,42 @@ const Home = () => {
                     </Heading>
                     <BioSection>
                         <BioYear>2003</BioYear>
-                        Türkiye, Bursa'da doğdu.
+                        Türkiye, Bursa’da doğdu.
                     </BioSection>
+                    <BioDiv/>
                     <BioSection>
                         <BioYear>2017</BioYear>
                         TÜBİTAK (Türkiye Bilimsel ve Teknolojik Araştırma Kurumu) yarışmasına katıldı.
                     </BioSection>
+                    <BioDiv/>
                     <BioSection>
                         <BioYear>2019</BioYear>
-                        İNOVATIM'de İnovasyon ve Yapay Zeka dersleri aldı.
+                        İNOVATİM’de inovasyon ve yapay zeka dersleri aldı.
                     </BioSection>
+                    <BioDiv/>
                     <BioSection>
                         <BioYear>2021</BioYear>
-                        OIB MTAL Lisesi'nden Okul üçüncüsü olarak Otomasyon Teknikeri derecesi ile mezun oldu.
+                        OIB MTAL’den <b>okul üçüncüsü</b> olarak <i>Endüstriyel Otomasyon Teknikeri</i> derecesiyle mezun oldu.
                     </BioSection>
+                    <BioDiv/>
                     <BioSection>
                         <BioYear>2022</BioYear>
-                        TEKNOFEST'in Otonom Denizaltı yarışmasında yer aldı.
+                        TEKNOFEST Otonom Denizaltı Yarışması’na katıldı.
                     </BioSection>
+                    <BioDiv/>
                     <BioSection>
                         <BioYear>2022 - 2024</BioYear>
-                        Bursa Uludağ Üniversitesi'nde Bilgisayar Programcılığı bölümünden sınıf birinciliğiyle mezun oldu.
+                        Bursa Uludağ Üniversitesi Bilgisayar Programcılığı bölümünden <b>sınıf birincisi</b> olarak mezun oldu.
                     </BioSection>
+                    <BioDiv/>
                     <BioSection>
                         <BioYear>2023 - 2024</BioYear>
-                        Bosch Türkiye'de Yazılım geliştiricisi olarak stajını tamamladı.
+                        Bosch Türkiye’de <i>düşük kodlu uygulama geliştirme</i> alanında staj yaptı.
                     </BioSection>
+                    <BioDiv/>
                     <BioSection>
                         <BioYear>2024</BioYear>
-                        Anadolu Üniversitesi (Eskişehir)'de Açıköğretim Yönetim Bilişim Sistemleri okumaya başladı.
+                        Anadolu Üniversitesi Açıköğretim Fakültesi <i>Yönetim Bilişim Sistemleri</i> bölümünde eğitimine başladı.
                     </BioSection>
                 </Section>
                 <Section delay={0.5}>
@@ -150,6 +144,13 @@ const Home = () => {
                         Sosyal Medya Linkleri
                     </Heading>
                     <List>
+                        <ListItem>
+                            <Link href="https://matrix.to/#/@fleetime:matrix.org" target="_blank">
+                                <Button variant="ghost" colorScheme="teal" leftIcon={<Icon as={TbBrandMatrix} />}>
+                                    @fleetime:matrix.org
+                                </Button>
+                            </Link>
+                        </ListItem>
                         <ListItem>
                             <Link href="https://github.com/flee-time" target="_blank">
                                 <Button variant="ghost" colorScheme="teal" leftIcon={<Icon as={IoLogoGithub} />}>
@@ -178,13 +179,13 @@ const Home = () => {
                                 </Button>
                             </Link>
                         </ListItem>
-                        <ListItem>
+                        {/* <ListItem>
                             <Link href="https://discord.gg/S4UPxYsJDr" target="_blank">
                                 <Button variant="ghost" colorScheme="teal" leftIcon={<Icon as={IoLogoDiscord} />}>
                                     Discord
                                 </Button>
                             </Link>
-                        </ListItem>
+                        </ListItem> */}
                     </List>
                 </Section>
             </Container>
