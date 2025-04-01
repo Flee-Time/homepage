@@ -4,7 +4,7 @@ import NextLink from 'next/link'
 import Section from '../components/section'
 import { Paragraph , Centered_Paragraph } from '../components/paragraph'
 import { BioYear, BioSection, AbSection, Abilities, BioDiv } from '../components/bio'
-import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub, IoLogoDiscord, IoLogoYoutube } from 'react-icons/io5'
+import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub, IoLogoDiscord, IoLogoYoutube, IoLogoLinkedin } from 'react-icons/io5'
 import { TbBrandMatrix } from "react-icons/tb";
 import Layout from '../components/layouts/article'
 
@@ -152,13 +152,20 @@ const Home = () => {
                             </Link>
                         </ListItem>
                         <ListItem>
+                            <Link href="https://www.linkedin.com/in/fleetimee/" target="_blank">
+                                <Button variant="ghost" colorScheme="teal" leftIcon={<Icon as={IoLogoLinkedin} />}>
+                                    Koray Bilir
+                                </Button>
+                            </Link>
+                        </ListItem>
+                        <ListItem>
                             <Link href="https://github.com/flee-time" target="_blank">
                                 <Button variant="ghost" colorScheme="teal" leftIcon={<Icon as={IoLogoGithub} />}>
                                     @Flee-Time
                                 </Button>
                             </Link>
                         </ListItem>
-                        <ListItem>
+                        {/* <ListItem>
                             <Link href="https://twitter.com/koray509" target="_blank">
                                 <Button variant="ghost" colorScheme="teal" leftIcon={<Icon as={IoLogoTwitter} />}>
                                     @koray509
@@ -179,7 +186,7 @@ const Home = () => {
                                 </Button>
                             </Link>
                         </ListItem>
-                        {/* <ListItem>
+                        <ListItem>
                             <Link href="https://discord.gg/S4UPxYsJDr" target="_blank">
                                 <Button variant="ghost" colorScheme="teal" leftIcon={<Icon as={IoLogoDiscord} />}>
                                     Discord
